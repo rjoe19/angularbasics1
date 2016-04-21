@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
   <title>Angular basics 1 - lynda.com</title>
   <script src="./node_modules/angular/angular.js"></script>
+  <script src="./js/controllers.js"></script>
+  <link rel="stylesheet" href="./angular/css/style.css">
 </head>
 <body>
-  <input type="text" ng-model="name">
-  <h2>Welcome {{name}}</h2>
-
+  <div class="main" ng-controller = "MyController">
+    <ul class="artistlist">
+      <li class="artist cf" ng-repeat="item in artists">
+        <img src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+        <div class="info">
+          <h2>{{item.name}}</h2>
+          <h3>{{item.reknown}}</h3>
 </body>
 </html>
